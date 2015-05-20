@@ -70,10 +70,9 @@ class CodeIgniter_Sniffs_NamingConventions_ValidClassNameSniff implements PHP_Co
 
         // Ensure it is not CamelCase
         if (preg_match('|[a-z][A-Z]|', $name) !== 0) {
-            $varName = $matches[0];
             $error = '%s name must not be in camel caps format';
             $phpcsFile->addError($error, $stackPtr, 'StringCamelCaps', $errorData);
-            
+
         }
     }//end process()
 
